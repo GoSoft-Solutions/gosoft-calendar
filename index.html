@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programa una reunión con GoSoft Solutions - Agenda tu cita para conocer nuestras soluciones tecnológicas personalizadas">
+    <meta name="keywords" content="GoSoft Solutions, programar reunión, agenda, cita, consultoría tecnológica">
+    <meta name="author" content="GoSoft Solutions">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <title>GoSoft Calendar</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Calendar Appointment Scheduling CSS -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <!-- Header con Banner -->
+        <header class="header-banner">
+            <a href="https://gosoftsolutions.com" target="_blank" rel="noopener noreferrer" class="logo-link">
+                <img src="images/GoSoft sf.png" alt="GoSoft Solutions Banner" class="main-banner">
+            </a>
+        </header>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <!-- Lado Izquierdo: Información y Botón -->
+                <div class="hero-left">
+                    <h1>GoSoft Calendar</h1>
+                    <p>Agenda una reunión con el Team de GoSoft Solutions para conocer tus necesidades, resolver dudas y definir la mejor solución tecnológica para tu proyecto. La reunión será personalizada y enfocada en tus objetivos.</p>
+                    
+                    <!-- Google Calendar Appointment Scheduling Button -->
+                    <div class="appointment-button">
+                        <!-- Google Calendar Appointment Scheduling begin -->
+                        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                        <script>
+                        (function() {
+                          var target = document.currentScript;
+                          window.addEventListener('load', function() {
+                            calendar.schedulingButton.load({
+                              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ07--wYgtfVoXaognmAmD9sI1gL1GOiOrn4EleXlBtH8ilsGgjnkiZydki9gGNQSf9kSRhnujEB?gv=true',
+                              color: '#039BE5',
+                              label: 'Programar una reunión',
+                              target,
+                            });
+                          });
+                        })();
+                        </script>
+                        <!-- end Google Calendar Appointment Scheduling -->
+                    </div>
+                </div>
+
+                <!-- Línea divisora -->
+                <div class="divider-line"></div>
+
+                <!-- Lado Derecho: Pasos sin título -->
+                <div class="hero-right">
+                    <div class="steps-container">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Haz clic en "Programar una reunión"</h3>
+                                <p>Se abrirá nuestro calendario con horarios disponibles</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Selecciona fecha y hora</h3>
+                                <p>Elige el día y horario que mejor se ajuste a tu agenda</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Completa tus datos</h3>
+                                <p>Proporciona tu información de contacto y detalles del proyecto</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Confirma tu cita</h3>
+                                <p>Recibirás un correo de confirmación y recordatorios automáticos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="copyright">&copy; 2025 GoSoft Solutions. Todos los derechos reservados.</p>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
