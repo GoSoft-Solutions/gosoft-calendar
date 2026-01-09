@@ -197,6 +197,19 @@ main {
     bottom: 0;
 }
 
+/* Privacy Policy link styling */
+.copyright a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: inherit;
+    opacity: inherit;
+}
+
+.copyright a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .hero-left h1 {
