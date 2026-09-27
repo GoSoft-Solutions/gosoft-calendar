@@ -1,23 +1,12 @@
-# Security Policy
+# Política de seguridad
 
-## Supported Versions
+## Reportar una vulnerabilidad
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
+Si encuentras una vulnerabilidad, **no abras un issue público**. Contáctanos de forma privada a través de
+[gosoftsolutions.com](https://gosoftsolutions.com).
 
-## Reporting a Vulnerability
+## Alcance
 
-If you discover a security vulnerability, please send an email to security@gosoft.com
-
-**Please do not report security vulnerabilities through public GitHub issues.**
-
-We will respond to security reports within 48 hours and provide regular updates on our progress.
-
-## Security Measures
-
-- No server-side code (static HTML/CSS/JS only)
-- Google Calendar API integration through official scripts
-- No user data storage on our servers
-- HTTPS enforced when deployed
-- Content Security Policy headers recommended
+- Sitio 100 % estático (HTML/CSS); no hay código de servidor ni base de datos.
+- Las citas se agendan con el script oficial de Google Calendar Appointment Scheduling; este sitio no recibe ni almacena datos de los usuarios.
+- Los headers de seguridad HTTP se configuran en `vercel.json`.
