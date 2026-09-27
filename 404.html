@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Página no encontrada</title>
+    <link rel="icon" href="/favicon.ico">
     <style>
         :root {
             color-scheme: dark;
@@ -179,7 +180,7 @@
             animationLink.href = homeUrl;
         }
 
-        fetch('404-error.json')
+        fetch('/404-error.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`No se pudo cargar la animación: ${response.status} ${response.statusText}`);

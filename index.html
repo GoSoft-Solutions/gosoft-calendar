@@ -7,13 +7,9 @@
     <meta name="keywords" content="GoSoft, programar reunión, agenda, cita, consultoría tecnológica">
     <meta name="author" content="GoSoft">
     <meta name="robots" content="index, follow">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>GoSoft Calendar</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="alternate icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Calendar Appointment Scheduling CSS -->
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
@@ -23,7 +19,7 @@
         <!-- Header con Banner -->
         <header class="header-banner">
             <a href="https://gosoftsolutions.com" target="_blank" rel="noopener noreferrer" class="logo-link">
-                <img src="images/GoSoft sf.png" alt="GoSoft Solutions Banner" class="main-banner">
+                <img src="images/gosoft-logo.png" alt="GoSoft Solutions" class="main-banner" width="1200" height="675">
             </a>
         </header>
         
@@ -42,12 +38,25 @@
                         <script>
                         (function() {
                           var target = document.currentScript;
+                          var url = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ07--wYgtfVoXaognmAmD9sI1gL1GOiOrn4EleXlBtH8ilsGgjnkiZydki9gGNQSf9kSRhnujEB?gv=true';
+                          var label = 'Programar una reunión';
                           window.addEventListener('load', function() {
+                            // Si el script de Google no cargó (bloqueador, red), mostrar un enlace directo
+                            if (!window.calendar || !calendar.schedulingButton) {
+                              var link = document.createElement('a');
+                              link.href = url;
+                              link.target = '_blank';
+                              link.rel = 'noopener noreferrer';
+                              link.className = 'appointment-fallback';
+                              link.textContent = label;
+                              target.parentNode.insertBefore(link, target.nextSibling);
+                              return;
+                            }
                             calendar.schedulingButton.load({
-                              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ07--wYgtfVoXaognmAmD9sI1gL1GOiOrn4EleXlBtH8ilsGgjnkiZydki9gGNQSf9kSRhnujEB?gv=true',
+                              url: url,
                               color: '#039BE5',
-                              label: 'Programar una reunión',
-                              target,
+                              label: label,
+                              target: target,
                             });
                           });
                         })();
@@ -99,7 +108,5 @@
         </section>
         <p class="copyright">&copy; 2026 GoSoft S.A. de C.V. All Rights Reserved. <a href="https://gosoftsolutions.com/politica-de-confidencialidad" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
     </main>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
