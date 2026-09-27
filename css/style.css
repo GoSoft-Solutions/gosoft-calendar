@@ -183,6 +183,51 @@ main {
     transform: none !important;
 }
 
+/* Foco visible para navegación con teclado */
+.appointment-button button:focus-visible,
+.appointment-button a:focus-visible {
+    outline: 3px solid #039BE5 !important;
+    outline-offset: 4px;
+}
+
+/* Enlace de respaldo si el script de Google no carga (mismo estilo que el botón) */
+.appointment-button .appointment-fallback {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #0B1F35;
+    border: 3px solid #ffffff;
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-button .appointment-fallback:hover {
+    background-color: #0B1F35;
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Modal de Google Calendar: el iframe viene con fondo transparente y
+   el contenido de la página se veía a través del calendario */
+iframe[src*="calendar.google.com/calendar/appointments"] {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.45);
+}
+
+/* Fondo del modal con los colores de la marca */
+body > div:has(> iframe[src*="calendar.google.com/calendar/appointments"]) {
+    background: rgba(11, 31, 53, 0.85) !important;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
 /* Copyright text - Hasta abajo siempre */
 .copyright {
     color: white;
@@ -282,18 +327,10 @@ main {
         padding: 18px 35px !important;
         font-size: 1.2rem !important;
     }
-    
-    .footer-content {
-        padding: 0 1rem;
-    }
-    
-    .star-icon {
-        width: 28px;
-        height: 28px;
-    }
-    
-    .footer-content p {
-        font-size: 0.8rem;
+
+    .appointment-button .appointment-fallback {
+        padding: 18px 35px;
+        font-size: 1.2rem;
     }
 }
 
@@ -350,17 +387,11 @@ main {
         font-size: 1rem !important;
         letter-spacing: 0.5px !important;
     }
-    
-    .footer {
-        padding: 1.5rem 0;
-    }
-    
-    .footer-content {
-        padding: 0 1rem;
-    }
-    
-    .footer-brand h3 {
-        font-size: 1.3rem;
+
+    .appointment-button .appointment-fallback {
+        padding: 16px 30px;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
     }
 }
 
